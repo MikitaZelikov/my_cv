@@ -6,10 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BP-Banner</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="./styles/normalize.css" rel="stylesheet">
-    <link href="./styles/style.css" rel="stylesheet">
-</head>
+    <link href="./style.css" rel="stylesheet">
+    <script type="text/javascript">
+        const systemLanguage = window.navigator.language.split('-')[0];
+        // const systemLanguage = 'blr';
+        debugger;
+        function RedirectTo(systemLanguage) {
+            window.location.search = `?lang=${systemLanguage}`;
+            return false;
+        }
+    </script>
+<script defer src="bundle.js"></script></head>
 
 <body>
     <div class="wrapper">
@@ -21,37 +28,54 @@
                         fill="white" fill-opacity="0.4" />
                 </svg>
             </a>
-            <a class="navigation__restore-btn" data-variable="Restore"></a>
+            <a class="navigation__restore-btn">
+
+            </a>
         </header>
         <main class="content">
-            <h1 class="content__title" data-variable="Unlimited Access<br>to All Features"></h1>
+            <h1 class="content__title"></h1>
             <ul class="content__features-list content-features-list">
-                <li class="content-features-list__item" data-variable="Unlimited documents"></li>
-                <li class="content-features-list__item" data-variable="Count mode"></li>
-                <li class="content-features-list__item" data-variable="Text recognition (OCR)"></li>
+                <li class="content-features-list__item"></li>
+                <li class="content-features-list__item"></li>
+                <li class="content-features-list__item"></li>
             </ul>
             <ul class="content__prices-list content-prices-list">
                 <li class="content-prices-list__item">
-                    <span data-variable="Monthly"></span>
-                    <span data-variable="<strong>{{price}}</strong><br>per month"></span>
-                    <span data-variable="3 DAYS FREE"></span>
-                    <span data-variable="{{price}}/month"></span>
+                    <span>
+                        1
+                    </span>
+                    <span>
+                        2
+                    </span>
+                    <span>
+                        3
+                    </span>
+                    <span>
+                        4
+                    </span>
                 </li>
                 <li class="content-prices-list__item">
-                    <span data-variable="-83%"></span>
-                    <span data-variable="Annually"></span>
-                    <span data-variable="<strong>{{price}}</strong><br>per year"></span>
-                    <span data-variable="MOST POPULAR"></span>
-                    <span data-variable=""></span>
+                    <span>
+                        1
+                    </span>
+                    <span>
+                        2
+                    </span>
+                    <span>
+                        3
+                    </span>
+                    <span>
+                        4
+                    </span>
                 </li>
             </ul>
-            <a href="#" class="content__continue-btn" data-variable="Continue"></a>
+            <a href="#" class="content__continue-btn"></a>
         </main>
         <footer class="footer">
-            <a href="#" class="footer__cancel-btn" data-variable="Auto-renewable. Cancel anytime."></a>
+            <a href="#" class="footer__cancel-btn"></a>
             <div class="footer__rules footer-rules">
-                <a href="" class="footer-rules__terms-use" data-variable="Terms of Use"></a>
-                <a href="" class="footer-rules__privacy-policy" data-variable="Privacy Policy"></a>
+                <a href="" class="footer-rules__terms-use"></a>
+                <a href="" class="footer-rules__privacy-policy"></a>
             </div>
         </footer>
     </div>
