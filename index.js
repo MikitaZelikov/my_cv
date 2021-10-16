@@ -4,6 +4,11 @@ if (!window.location.search) {
     window.location.search = `?lang=${systemLanguage}`;
 }
 
+function toggleRef(e) {
+    const continueBtn = document.querySelector('.content__continue-btn');
+    continueBtn.href = e.currentTarget.dataset.ref;
+}
+
 renderDOM();
 
 async function getAppLanguage() {
@@ -21,13 +26,27 @@ async function getAppLanguage() {
 }
 
 async function renderDOM() {
+    const offerElements = Array.from(document.querySelectorAll('[class*="content-prices-list__item"]'));
+    offerElements.map((elem) => elem.onclick = toggleRef);
+
     const currentLanguage = await getAppLanguage();
     const variableElements = document.querySelectorAll('[data-variable]');
 
     for (let elem of variableElements) {
         const attrValue = elem.dataset.variable;
-        elem.innerHTML = currentLanguage[attrValue];
-        // debugger;   
-    }
-    
+        let innerValue;
+        if (elem.dataset.price) {
+            if (elem.dataset.variable === "{{price}}/month") {
+                innerValue = attrValue.replace('{{price}}/', `${elem.dataset.price} `);
+            } else innerValue = attrValue.replace('{{price}}', elem.dataset.price);
+        }
+        if (elem.hasAttribute('data-price-calc')) {
+            const elemCost = document.querySelector('[data-variable="<strong>{{price}}</strong><br>per year"]');
+            const cost = elemCost.dataset.price.substring(1);
+            innerValue = `$${Math.round((cost / 12) * 100) / 100} month`;
+        }
+        elem.innerHTML = innerValue || currentLanguage[attrValue];
+    } 
 }
+
+
