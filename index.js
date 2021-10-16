@@ -1,6 +1,6 @@
 if (!window.location.search) {
-    const systemLanguage = window.navigator.language.split('-')[0];
-    // const systemLanguage = 'blr';
+    // const systemLanguage = window.navigator.language.split('-')[0];
+    const systemLanguage = 'blr';
     window.location.search = `?lang=${systemLanguage}`;
 }
 

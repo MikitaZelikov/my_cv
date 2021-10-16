@@ -14,35 +14,41 @@
 <body>
     <div class="wrapper">
         <header class="navigation">
-            <a class="navigation__close-btn">
+            <a href="#" class="navigation__close-btn">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M15.74 0.259984C15.4346 -0.0453608 14.9396 -0.0453608 14.6342 0.259984L7.99997 6.89425L1.3657 0.259984C1.06036 -0.0453608 0.565298 -0.0453608 0.259953 0.259984C-0.0453913 0.565328 -0.0453913 1.06039 0.259953 1.36573L6.89422 8L0.259953 14.6343C-0.0453913 14.9396 -0.0453913 15.4347 0.259953 15.74C0.565298 16.0454 1.06036 16.0454 1.3657 15.74L7.99997 9.10575L14.6342 15.74C14.9396 16.0454 15.4346 16.0454 15.74 15.74C16.0453 15.4347 16.0453 14.9396 15.74 14.6343L9.10572 8L15.74 1.36573C16.0453 1.06039 16.0453 0.565328 15.74 0.259984Z"
                         fill="white" fill-opacity="0.4" />
                 </svg>
             </a>
-            <a class="navigation__restore-btn" data-variable="Restore"></a>
+            <a href="#" class="navigation__restore-btn" data-variable="Restore"></a>
         </header>
         <main class="content">
             <h1 class="content__title" data-variable="Unlimited Access<br>to All Features"></h1>
             <ul class="content__features-list content-features-list">
-                <li class="content-features-list__item" data-variable="Unlimited documents"></li>
-                <li class="content-features-list__item" data-variable="Count mode"></li>
-                <li class="content-features-list__item" data-variable="Text recognition (OCR)"></li>
+                <li class="content-features-list__item">
+                    <img class="content-features-list__icon" src="./assets/icon/unlimitedDocs.svg" alt="infinity symbol"><span data-variable="Unlimited documents"></span>
+                </li>
+                <li class="content-features-list__item">
+                    <img class="content-features-list__icon" src="./assets/icon/export.svg" alt="arrow symbol"><span data-variable="Count mode"></span>
+                </li>
+                <li class="content-features-list__item">
+                    <img class="content-features-list__icon" src="./assets/icon/noAds.svg" alt="recognition symbol"><span data-variable="Text recognition (OCR)"></span>
+                </li>
             </ul>
             <ul class="content__prices-list content-prices-list">
-                <li class="content-prices-list__item">
-                    <span data-variable="Monthly"></span>
-                    <span data-variable="<strong>{{price}}</strong><br>per month"></span>
-                    <span data-variable="3 DAYS FREE"></span>
-                    <span data-variable="{{price}}/month"></span>
+                <li class="content-prices-list__item content-prices-list__item--monthly">
+                    <span class="content-prices-list__period" data-variable="Monthly"></span>
+                    <span class="content-prices-list__cost" data-variable="<strong>{{price}}</strong><br>per month"></span>
+                    <span class="content-prices-list__slogan" data-variable="3 DAYS FREE"></span>
+                    <span class="content-prices-list__price" data-variable="{{price}}/month"></span>
                 </li>
-                <li class="content-prices-list__item">
-                    <span data-variable="-83%"></span>
-                    <span data-variable="Annually"></span>
-                    <span data-variable="<strong>{{price}}</strong><br>per year"></span>
-                    <span data-variable="MOST POPULAR"></span>
-                    <span data-variable=""></span>
+                <li class="content-prices-list__item content-prices-list__item--annually">
+                    <span class="content-prices-list__discount" data-variable="-83%"></span>
+                    <span class="content-prices-list__period"   data-variable="Annually"></span>
+                    <span class="content-prices-list__cost" data-variable="<strong>{{price}}</strong><br>per year"></span>
+                    <span class="content-prices-list__slogan" data-variable="MOST POPULAR"></span>
+                    <span class="content-prices-list__price" data-variable=""></span>
                 </li>
             </ul>
             <a href="#" class="content__continue-btn" data-variable="Continue"></a>
@@ -50,10 +56,13 @@
         <footer class="footer">
             <a href="#" class="footer__cancel-btn" data-variable="Auto-renewable. Cancel anytime."></a>
             <div class="footer__rules footer-rules">
-                <a href="" class="footer-rules__terms-use" data-variable="Terms of Use"></a>
-                <a href="" class="footer-rules__privacy-policy" data-variable="Privacy Policy"></a>
+                <a href="#" class="footer-rules__terms-use" data-variable="Terms of Use"></a>
+                <a href="#" class="footer-rules__privacy-policy" data-variable="Privacy Policy"></a>
             </div>
         </footer>
+        <div class="home-indicator">
+            <p class="home-indicator__scroll"></p>
+        </div>
     </div>
     <!-- <script src="index.js"></scrip> -->
 </body>
