@@ -119,6 +119,11 @@ header {
     opacity: 0.25;
 }
 
+.target {
+    opacity: 1;
+    transform: scale(1.1, 1.1);
+}
+
 .content-prices-list__period {
     font-size: 1.0625em;
     margin: 2.83vh 8.93vw 0;
@@ -131,9 +136,12 @@ header {
 
 .content-prices-list__slogan {
     font-size: 0.875em;
+    font-weight: bold;
     margin-top: 0.86vh;
     width: 95%;
     background-color: #495795;
+    padding: 0.2em;
+    letter-spacing: 1px;
 }
 
 .content-prices-list__price {

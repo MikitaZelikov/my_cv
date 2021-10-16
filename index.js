@@ -7,6 +7,10 @@ if (!window.location.search) {
 function toggleRef(e) {
     const continueBtn = document.querySelector('.content__continue-btn');
     continueBtn.href = e.currentTarget.dataset.ref;
+
+    const previousTarget = document.querySelector('[class*="target"]');
+    if (previousTarget) previousTarget.classList.remove("target");
+    e.currentTarget.classList.add("target");
 }
 
 renderDOM();
