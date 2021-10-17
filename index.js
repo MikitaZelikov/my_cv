@@ -5,10 +5,6 @@ if (!window.location.search) {
     window.location.search = `?lang=${systemLanguage}`;
 }
 
-if (systemLanguage === 'ru' || systemLanguage === 'es' || systemLanguage === 'fr' || systemLanguage === 'nl') {
-    document.documentElement.className = 'decrease-scale';
-}
-
 function refToggler(e) {
     const continueBtn = document.querySelector('.content__continue-btn');
     continueBtn.href = e.currentTarget.dataset.ref;
@@ -18,12 +14,27 @@ function refToggler(e) {
     e.currentTarget.classList.add("target");
 }
 
+function scaleText(languageParam) {
+    if (languageParam === 'ru' || languageParam === 'es' || languageParam === 'fr' || languageParam === 'nl') {
+        document.documentElement.className = 'decrease-scale';
+        
+        if (languageParam === 'fr') {
+            const sloganElements = document.querySelectorAll('.content-prices-list__slogan');
+            for (elem of sloganElements) {
+                elem.classList.add('content-prices-list__slogan--france');
+            }
+        }
+    }
+}
+
 renderDOM();
 
 async function getAppLanguage() {
     const refParams = new URLSearchParams(window.location.search);
     const languageParam = refParams.get('lang');
     const url = './assets/languages/' + languageParam + '.json';
+
+    scaleText(languageParam);
 
     let response = await fetch(url);
     if (!response.ok) {

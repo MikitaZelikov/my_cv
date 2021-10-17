@@ -150,6 +150,11 @@ header {
     box-sizing: border-box;
 }
 
+.content-prices-list__slogan--france {
+    font-size: 0.65em;
+    width: 90%;
+}
+
 .content-prices-list__price {
     font-size: 0.75em;
     margin: 1.23vh 8.53vw 1.6vh;
