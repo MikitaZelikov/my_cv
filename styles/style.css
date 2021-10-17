@@ -11,6 +11,10 @@
         url("../assets/fonts/MiConv.com__SFProText-Regular.woff2") format("woff2");
 }
 
+.decrease-scale {
+    font-size: 14px;
+}
+
 body {
     max-width: fit-content;
     margin: 0 auto;
@@ -40,11 +44,12 @@ header a {
     display: flex;
     align-items: center;
     color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8125rem;
 }
 
 main {
     font-family: "SFProDisplay";
-    margin-top: 18.8vh;
+    margin-top: 4.8vh;
 }
 
 footer {
@@ -56,25 +61,25 @@ footer {
 .wrapper {
     display: flex;
     flex-direction: column;
-    background-image: url("../assets/background/4@3x.png");
-    width: 414px;
-    height: 736px;
+    background-image: url("../assets/background/4@2x.png");
+    width: 320px;
+    height: 568px;
     background-size: cover;
-    padding: 10.7% 5.3% 2.14%;
+    padding: 2.14% 5.3%;
     box-sizing: border-box;
     text-align: center;
 }
 
 .content__title {
     font-size: 2.25rem;
-    margin: 0 6.4vw 3.6vh;
+    margin: 0 0 3.6vh;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .content__features-list {
     font-family: "SFProText";
     font-size: 1.0625em;
-    margin: 0 0 6.5vh 18.3vw;
+    margin: 0 0 2.5vh 9.3vw;
     text-align: start;
 }
 
@@ -98,7 +103,7 @@ header {
 }
 
 .content__prices-list {
-    margin: 0 6.67vw;
+    margin: 0 3vw;
 }
 
 .content-prices-list__item--monthly {
@@ -138,10 +143,11 @@ header {
     font-size: 0.875em;
     font-weight: bold;
     margin-top: 0.86vh;
-    width: 95%;
+    width: 105%;
     background-color: #495795;
-    padding: 0.2em;
+    padding: 0.2em 0;
     letter-spacing: 1px;
+    box-sizing: border-box;
 }
 
 .content-prices-list__price {
@@ -156,9 +162,9 @@ header {
     justify-content: center;
     position: absolute;
     top: 0%;
-    right: 4%;
-    width: 8.5vw;
-    height: 8.5vw;
+    right: 3%;
+    width: 9.2vw;
+    height: 8.6vw;
     border-radius: 50%;
     background-color: #DB0000;
 }
@@ -200,34 +206,79 @@ header {
     width: 35.73vw;
     height: 0.62vh;
     margin: 0 auto;
+    border-radius: 0.5em;
     background-color: #FFFFFF;
 }
 
-@media only screen and (max-width: 390px) and (min-resolution: 3dppx) {
+@media only screen and (min-width: 375px) and (min-height: 667px) and (min-resolution: 2dppx) {
+    .wrapper {
+        width: 375px;
+        height: 667px;
+        padding: 10.7% 5.3% 2.14%;
+    }
+
+    main {
+        margin-top: 7.8vh;
+    }
+
+    .content__features-list {
+        margin: 0 0 6.5vh 18.3vw;
+    }
+
+    .content__prices-list {
+        margin: 0 6.67vw;
+    }
+
+    .content-prices-list__discount {
+        right: 4%;
+        width: 8.2vw;
+        height: 8vw;
+    }
+}
+
+@media only screen and (min-width: 375px) and (min-resolution: 3dppx) {
+    .wrapper {
+        background-image: url("../assets/background/4@3x.png");
+        width: 375px;
+        height: 812px;
+    }
+
+    main {
+        margin-top: 18.8vh;
+    }
+
+    .content-prices-list__discount {
+        right: 1%;
+        width: 8.5vw;
+        height: 8.7vw;
+    }
+}
+
+@media only screen and (min-width: 390px) and (min-resolution: 3dppx) {
     .wrapper {
         width: 390px;
         height: 844px;
     }
-}
 
-@media only screen and (max-width: 375px) and (max-height: 812px) and (min-resolution: 3dppx) {
-    .wrapper {
-        width: 375px;
-        height: 812px;
+    .content-prices-list__discount {
+        right: 0.5%;
+        height: 8.5vw;
     }
 }
 
-@media only screen and (max-width: 375px) and (max-height: 667px) and (min-resolution: 2dppx) {
+@media only screen and (min-width: 414px) and (min-height: 736px) and (min-resolution: 3dppx) {
     .wrapper {
-        background-image: url("../assets/background/4@2x.png");
-        width: 375px;
-        height: 667px;
+        width: 414px;
+        height: 736px;
     }
-}
 
-@media only screen and (max-width: 320px) and (min-resolution: 2dppx) {
-    .wrapper {
-        width: 320px;
-        height: 568px;
+    main {
+        margin-top: 10.8vh;
+    }
+
+    .content-prices-list__discount {
+        right: 4%;
+        width: 8vw;
+        height: 7.8vw;
     }
 }
