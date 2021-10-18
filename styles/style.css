@@ -79,8 +79,8 @@ footer {
 .content__features-list {
     font-family: "SFProText";
     font-size: 1.0625em;
-    margin: 0 0 2.5vh 9.3vw;
-    text-align: start;
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .content-features-list__item {
@@ -95,7 +95,6 @@ footer {
     margin-right: 0.5em;
 }
 
-.content__prices-list,
 .footer__rules,
 header {
     display: flex;
@@ -103,7 +102,13 @@ header {
 }
 
 .content__prices-list {
-    margin: 0 3vw;
+    margin-top: 6.5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__prices-list--decrease-margin {
+    margin-top: 3.5vh;
 }
 
 .content-prices-list__item--monthly {
@@ -122,6 +127,9 @@ header {
     position: relative;
     align-items: center;
     opacity: 0.25;
+    width: 131px;
+    height: 162px;
+    justify-content: space-evenly;
 }
 
 .target {
@@ -131,33 +139,29 @@ header {
 
 .content-prices-list__period {
     font-size: 1.0625em;
-    margin: 2.83vh 8.93vw 0;
+    margin-top: 2.83vh;
+    width: 50%;
 }
 
 .content-prices-list__cost {
     font-size: 0.875em;
-    margin: 2.22vh 9.07vw 0;
+    margin-top: 2.22vh;
 }
 
 .content-prices-list__slogan {
     font-size: 0.875em;
     font-weight: bold;
     margin-top: 0.86vh;
-    width: 105%;
+    width: 103%;
     background-color: #495795;
     padding: 0.2em 0;
     letter-spacing: 1px;
     box-sizing: border-box;
 }
 
-.content-prices-list__slogan--france {
-    font-size: 0.65em;
-    width: 90%;
-}
-
 .content-prices-list__price {
     font-size: 0.75em;
-    margin: 1.23vh 8.53vw 1.6vh;
+    margin: 1.23vh 0 1.6vh;
 }
 
 .content-prices-list__discount {
@@ -166,10 +170,10 @@ header {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 0%;
-    right: 3%;
-    width: 9.2vw;
-    height: 8.6vw;
+    right: 0;
+    top: 1px;
+    width: 24.43%;
+    height: 19.4%;
     border-radius: 50%;
     background-color: #DB0000;
 }
@@ -226,18 +230,8 @@ header {
         margin-top: 7.8vh;
     }
 
-    .content__features-list {
-        margin: 0 0 6.5vh 18.3vw;
-    }
-
     .content__prices-list {
-        margin: 0 6.67vw;
-    }
-
-    .content-prices-list__discount {
-        right: 4%;
-        width: 8.2vw;
-        height: 8vw;
+        justify-content: space-evenly;
     }
 }
 
@@ -251,23 +245,12 @@ header {
     main {
         margin-top: 18.8vh;
     }
-
-    .content-prices-list__discount {
-        right: 1%;
-        width: 8.5vw;
-        height: 8.7vw;
-    }
 }
 
 @media only screen and (min-width: 390px) and (min-resolution: 3dppx) {
     .wrapper {
         width: 390px;
         height: 844px;
-    }
-
-    .content-prices-list__discount {
-        right: 0.5%;
-        height: 8.5vw;
     }
 }
 
@@ -279,11 +262,5 @@ header {
 
     main {
         margin-top: 10.8vh;
-    }
-
-    .content-prices-list__discount {
-        right: 4%;
-        width: 8vw;
-        height: 7.8vw;
     }
 }

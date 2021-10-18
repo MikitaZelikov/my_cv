@@ -18,11 +18,9 @@ function scaleText(languageParam) {
     if (languageParam === 'ru' || languageParam === 'es' || languageParam === 'fr' || languageParam === 'nl') {
         document.documentElement.className = 'decrease-scale';
         
-        if (languageParam === 'fr') {
-            const sloganElements = document.querySelectorAll('.content-prices-list__slogan');
-            for (elem of sloganElements) {
-                elem.classList.add('content-prices-list__slogan--france');
-            }
+        if ((languageParam === 'fr' || languageParam === 'ru') && window.innerHeight < 736) {
+            const pricesList = document.querySelector('[class*="content__prices-list"]');
+            pricesList.classList.add('content__prices-list--decrease-margin');
         }
     }
 }
