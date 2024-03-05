@@ -5,64 +5,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BP-Banner</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="./styles/normalize.css" rel="stylesheet">
-    <link href="./styles/style.css" rel="stylesheet">
+    <title>My CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="navigation">
-            <a href="#" class="navigation__close-btn">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M15.74 0.259984C15.4346 -0.0453608 14.9396 -0.0453608 14.6342 0.259984L7.99997 6.89425L1.3657 0.259984C1.06036 -0.0453608 0.565298 -0.0453608 0.259953 0.259984C-0.0453913 0.565328 -0.0453913 1.06039 0.259953 1.36573L6.89422 8L0.259953 14.6343C-0.0453913 14.9396 -0.0453913 15.4347 0.259953 15.74C0.565298 16.0454 1.06036 16.0454 1.3657 15.74L7.99997 9.10575L14.6342 15.74C14.9396 16.0454 15.4346 16.0454 15.74 15.74C16.0453 15.4347 16.0453 14.9396 15.74 14.6343L9.10572 8L15.74 1.36573C16.0453 1.06039 16.0453 0.565328 15.74 0.259984Z"
-                        fill="white" fill-opacity="0.4" />
-                </svg>
-            </a>
-            <a href="#" class="navigation__restore-btn" data-variable="Restore"></a>
-        </header>
-        <main class="content">
-            <h1 class="content__title" data-variable="Unlimited Access<br>to All Features"></h1>
-            <ul class="content__features-list content-features-list">
-                <li class="content-features-list__item">
-                    <img class="content-features-list__icon" src="./assets/icon/unlimitedDocs.svg" alt="infinity symbol"><span data-variable="Unlimited documents"></span>
-                </li>
-                <li class="content-features-list__item">
-                    <img class="content-features-list__icon" src="./assets/icon/export.svg" alt="arrow symbol"><span data-variable="Count mode"></span>
-                </li>
-                <li class="content-features-list__item">
-                    <img class="content-features-list__icon" src="./assets/icon/noAds.svg" alt="recognition symbol"><span data-variable="Text recognition (OCR)"></span>
-                </li>
-            </ul>
-            <ul class="content__prices-list content-prices-list">
-                <li class="content-prices-list__item content-prices-list__item--monthly" data-ref="https://apple.com/">
-                    <span class="content-prices-list__period" data-variable="Monthly"></span>
-                    <span class="content-prices-list__cost" data-variable="<strong>{{price}}</strong><br>per month" data-price="$9.99"></span>
-                    <span class="content-prices-list__slogan" data-variable="3 DAYS FREE"></span>
-                    <span class="content-prices-list__price" data-variable="{{price}}/month" data-price="$9.99"></span>
-                </li>
-                <li class="content-prices-list__item content-prices-list__item--annually target" data-ref="https://google.com/">
-                    <span class="content-prices-list__discount" data-variable="-83%"></span>
-                    <span class="content-prices-list__period"   data-variable="Annually"></span>
-                    <span class="content-prices-list__cost" data-variable="<strong>{{price}}</strong><br>per year" data-price="$19.99"></span>
-                    <span class="content-prices-list__slogan" data-variable="MOST POPULAR"></span>
-                    <span class="content-prices-list__price" data-variable data-price-calc></span>
-                </li>
-            </ul>
-            <a href="https://google.com/" class="content__continue-btn" data-variable="Continue"></a>
-        </main>
-        <footer class="footer">
-            <a href="#" class="footer__cancel-btn" data-variable="Auto-renewable. Cancel anytime."></a>
-            <div class="footer__rules footer-rules">
-                <a href="#" class="footer-rules__terms-use" data-variable="Terms of Use"></a>
-                <a href="#" class="footer-rules__privacy-policy" data-variable="Privacy Policy"></a>
+        <section class="representation-block">
+            <div class="representation-block__person">
+                <div class="name-wrapper">
+                    <p class="representation-block__name">NIKITA ZELIKOV</p>
+                    <p class="representation-block__profession">frontend developer</p>
+                </div>
+                <figure class="representation-block__avatar"></figure>
             </div>
-        </footer>
-        <div class="home-indicator">
-            <p class="home-indicator__scroll"></p>
-        </div>
+            <div class="contacts">
+                <p class="title">CONTACT ME</p>
+                <ul class="contacts__list">
+                    <li class="contacts__item">+375(29)358-85-26</li>
+                    <li class="contacts__item">zelaniki@gmail.com</li>
+                    <li class="contacts__item">linkedin.com/in/nikita-zelikov-6414a1220/</li>
+                </ul>
+            </div>
+            <div class="education">
+                <p class="title">EDUCATION</p>
+                <ul class="education__list">
+                    <li class="education__item">
+                        <p class="education__institution">
+                            SENLA Software Engineering Laboratory.
+                        </p>
+                        <education__description>
+                            Courses 'Front-end development, React library'.<br>2020-2021
+                        </education__description>
+                    </li>
+                    <li class="education__item">
+                        <p class="education__institution">
+                            Belarusian National Technical University
+                        </p>
+                        <education__description>
+                            Industrial and civil construction.<br>2006-2011
+                        </education__description>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="info-block">
+            <div class="about-me">
+                <p class="title">ABOUT ME</p>
+                <p class="about-me__description description">
+                    I prefer to big companies with proper approach to work! Always try to find possibilities to develop my skills in users interface development. I want to understand finished product development process in general.
+
+                    I'm leading an active lifestyle and like trying any new kind of avtivity. I'm a candidate Master of Sports in JUDO wrestling.
+                </p>
+            </div>
+            <div class="experience">
+                <p class="title">JOB EXPERIENCE</p>
+                <ul class="experience__list">
+                    <li class="experience__item">
+                        <p class="experience__position">
+                            <span>FRONTEND DEVELOPER</span><span>2021-PRESENT</span>
+                        </p>
+                        <p class="experience__company">
+                            AIBY Inc. / Minsk
+                        </p>
+                        <p class="experience__description">
+                            Mobile-first ads banners, onboardings, landings development. Ads sites for mobile apps. PayPal, Stripe, ApplePay payment system integration. Conversion API, GoogleTagManager.
+                        </p>
+                    </li>
+                    <li class="experience__item">
+                        <p class="experience__position">
+                            <span>STUDENT</span><span>2020-2021</span>
+                        </p>
+                        <p class="experience__company">SENLA Software Engineering Laboratory</p>
+                    </li>
+                    <li class="experience__item">
+                        <p class="experience__position">
+                            <span>technical supervision in construction</span><span>2019-2020</span>
+                        </p>
+                        <p class="experience__company">Private construction company "Garant" / Minsk</p>
+                        <p class="experience__description">
+                            My job was to control contractors work, deadline work, execution of works in accordance with the project and estimates. We cooperated with the development company A-100 and worked in it’s objects such as New Borovaya and Green Harbor.
+                        </p>
+                    </li>
+                    <li class="experience__item">
+                        <p class="experience__position">
+                            <span>BUILDING ENGINEER, FOREMAN</span><span>2011-2019</span>
+                        </p>
+                        <p class="experience__company">Construction Trust №4 / Minsk</p>
+                        <p class="experience__description">
+                            As a foreman, I organized and managed production and economic activities on the object during the construction period. Communicated with project organizations, customers and contractors. Controlled the execution of work in accordance with the project and estimates. Managed about 100 people.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <p class="title">SKILLS</p>
+                <ul class="skills__list">
+                    <li class="skills__item skills__item--html">HTML</li>
+                    <li class="skills__item skills__item--css">CSS/SCSS</li>
+                    <li class="skills__item skills__item--git">GIT</li>
+                    <li class="skills__item skills__item--js">JavaScript</li>
+                    <li class="skills__item skills__item--ts">TypeScript</li>
+                    <li class="skills__item skills__item--vue">VUE</li>
+                    <li class="skills__item skills__item--react">REACT</li>
+                    <li class="skills__item skills__item--svelte">SVELTE</li>
+                    <li class="skills__item skills__item--gulp">GULP</li>
+                    <li class="skills__item skills__item--webpack">WEBPACK</li>
+                </ul>
+            </div>
+            <div class="language">
+                <p class="title">LANGUAGE</p>
+                <p class="language__description description">English - Upper Intermediate</p>
+            </div>
+            <div class="hobbies">
+                <p class="title">HOBBIES</p>
+                <p class="hobbies__list">
+                    I like photography and hiking! I'm keeping an eye on international JUDO tour and also participating in amateurs footbal legues.  
+                </p>
+            </div>
+        </section>
     </div>
 </body>
 
