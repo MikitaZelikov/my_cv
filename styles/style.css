@@ -1,8 +1,8 @@
 @import "./reset.css";
 
 html {
-    width: 100%;
-    height: 100%;
+    width: 70.7vh;
+    height: 100vh;
     font-size: 10px;
 }
 
@@ -14,17 +14,17 @@ body {
     background-color: #ffffff;
 }
 
-ul {
-    margin-top: 1rem;
-}
-
 p {
     width: fit-content;
     margin: 0 auto;
 }
 
+article + article {
+    margin-top: 1.5rem;
+}
+
 .wrapper {
-    padding-left: 2rem;
+    padding-left: 1.5rem;
     display: grid;
     grid-template-columns: 39% 1fr;
     height: 100%;
@@ -32,7 +32,7 @@ p {
 
 .title {
     padding-left: 2.5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5;
     font-weight: 600;
 }
@@ -41,15 +41,19 @@ p {
     display: flex;
     flex-direction: column;
     background-color: #ceccca;
+
+    .title {
+        margin-bottom: 1rem;
+    }
 }
 
 .representation-block__person {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 3rem 5% 5%;
-    height: 40%;
-    width: fit-content;
+    padding: 1.5rem 5% 5%;
+    height: 35%;
+    width: auto;
     background-color: #232126;
     border-bottom-left-radius: 10rem;
     border-bottom-right-radius: 10rem;
@@ -72,7 +76,7 @@ p {
 .representation-block__avatar {
     width: 14rem;
     height: 14rem;
-    margin: 0;
+    margin: 0 auto;
     border: 0.4rem solid #ffffff;
     border-radius: 8rem;
     background: url(../assets/avatars/avatar.png) no-repeat center / cover;
@@ -114,21 +118,27 @@ p {
 }
 
 .contacts__item {
-    /* text-align: start; */
     padding-left: 2.5rem;
     line-height: calc(1em + 1rem);
 }
 
-.education {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 40%;
+.representation-block__bottom {
     background-color: #232126;
     border-top-left-radius: 10rem;
     border-top-right-radius: 10rem;
-    padding-top: 5rem;
-    
+    height: 45%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+}
+
+.language .title {
+    background: url(../assets/icons/globe.svg) no-repeat left center / contain;
+}
+
+.education {
     .title {
         color: #ffffff;
         background: url(../assets/icons/education.svg) no-repeat left center / contain;
@@ -160,12 +170,11 @@ p {
 
 
 .info-block {
-    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem;
     white-space: normal;
-
-    article {
-        margin-bottom: 1.5rem;
-    }
 
     p {
         width: 100%;
@@ -177,7 +186,7 @@ p {
     .title {
         line-height: 1.5;
         text-align: start;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
         background: no-repeat left center / contain;
     }
 }
@@ -215,17 +224,62 @@ p {
 }
 
 .skills__list {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(4, calc(100% / 3 - 3 * 1rem));
-    grid-column-gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 0.2rem;
+    color: #232126;
 }
 
 .skills__item {
-    padding-left: 1.2rem;
     display: block;
+    flex-basis: 30%;
+    padding-left: 1.5rem;
+    text-align: start;
+    line-height: 1rem;
+    background: no-repeat left center / 1rem;
 }
 
-.language .title {
-    background-image: url(../assets/icons/languages.svg);
+.html {
+    background-image: url(../assets/icons/icon-html.svg);
+}
+
+.css {
+    background-image: url(../assets/icons/icon-css.svg);
+}
+
+.git {
+    background-image: url(../assets/icons/icon-git.svg);
+}
+
+.js {
+    background-image: url(../assets/icons/icon-js.svg);
+}
+
+.ts {
+    background-image: url(../assets/icons/icon-typescript.svg);
+}
+
+.vue {
+    background-image: url(../assets/icons/icon-vue.svg);
+}
+
+.react {
+    background-image: url(../assets/icons/icon-react.svg);
+}
+
+.svelte {
+    background-image: url(../assets/icons/icon-svelte.svg);
+}
+
+.gulp {
+    background-image: url(../assets/icons/icon-gulp.svg);
+}
+
+.webpack {
+    background-image: url(../assets/icons/icon-webpack.svg);
+}
+
+.hobbies .title {
+    background-image: url(../assets/icons/hobbies.svg);
 }
