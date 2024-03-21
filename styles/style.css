@@ -287,3 +287,25 @@ article + article {
 .hobbies .title {
     background-image: url(../assets/icons/hobbies.svg);
 }
+
+@media only screen and (min-aspect-ratio: 428/925) and (max-width: 430px) {
+    html {
+        font-size: 1.34vh;
+    }
+
+    body {
+        width: 100vw;
+        height: calc(1.4143 * 100vw);
+    }
+}
+
+@media only screen and (max-aspect-ratio: 428/926) and (max-width: 430px) {
+    html {
+        font-size: 1.1vh;
+    }
+
+    body {
+        width: 100vw;
+        height: calc(1.4143 * 100vw);
+    }
+}
