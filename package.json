@@ -1,7 +1,7 @@
 {
-  "name": "My_CV",
+  "name": "my_cv",
   "version": "1.0.0",
-  "description": "Необходимо сверстать полноэкранную веб-страницу (баннер) для мобильных устройств iPhone SE, 8, 8+, X, 12, все в портретной ориентации, на 7 языках (языковые строки в архиве). Для iPhone SE, 8, 8+ придется немного сжать содержимое, чтобы оно поместилось на экране, поднять фоновое изображение выше. Для девайсов iPhone X, 12 используется макет из задачи (для 12 потребуется пропорционально увеличить размеры).",
+  "description": "Nikita Zelikov cv",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MikitaZelikov/test-BPmobile.git"
+    "url": "git+https://github.com/MikitaZelikov/my_cv.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MikitaZelikov/test-BPmobile/issues"
+    "url": "https://github.com/MikitaZelikov/my_cv/issues"
   },
-  "homepage": "https://github.com/MikitaZelikov/test-BPmobile#readme",
+  "homepage": "https://github.com/MikitaZelikov/my_cv#readme",
   "devDependencies": {
     "css-loader": "^6.4.0",
     "html-webpack-plugin": "^5.3.2",
