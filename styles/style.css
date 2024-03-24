@@ -16,6 +16,7 @@ body {
     font-family: "Asap", sans-serif;
     background-color: #ffffff;
     box-shadow: 3px 3px 60px -5px rgba(35,33,38,0.6);
+    overflow: hidden;
 }
 
 p {
@@ -288,20 +289,9 @@ article + article {
     background-image: url(../assets/icons/hobbies.svg);
 }
 
-@media only screen and (min-aspect-ratio: 428/925) and (max-width: 430px) {
+@media only screen and (max-width: 430px) {
     html {
-        font-size: 1.34vh;
-    }
-
-    body {
-        width: 100vw;
-        height: calc(1.4143 * 100vw);
-    }
-}
-
-@media only screen and (max-aspect-ratio: 428/926) and (max-width: 430px) {
-    html {
-        font-size: 1.1vh;
+        font-size: 2.388vw;
     }
 
     body {
