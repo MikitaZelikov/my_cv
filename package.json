@@ -4,8 +4,8 @@
   "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --env development --mode development --open",
-    "build": "webpack --env production --mode production",
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production",
     "eslint": "eslint --ext .js src/",
     "eslint:fix": "eslint --fix --ext .js src/"
   },
@@ -42,9 +42,5 @@
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  },
-  "dependencies": {
-    "@splidejs/splide": "^4.1.4",
-    "@splidejs/splide-extension-auto-scroll": "^0.5.3"
   }
 }
