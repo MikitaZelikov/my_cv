@@ -25,7 +25,7 @@ p {
 }
 
 article + article {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .wrapper {
@@ -48,7 +48,7 @@ article + article {
     background-color: #ceccca;
 
     .title {
-        margin-bottom: 1rem;
+        margin-bottom: 0.6rem;
     }
     
     &__person {
@@ -95,8 +95,8 @@ article + article {
         align-items: center;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        padding-bottom: 2rem;
+        justify-content: space-between;
+        padding: 4rem 0 2rem;
     }
 }
 
@@ -193,7 +193,7 @@ article + article {
     .title {
         line-height: 1.5;
         text-align: start;
-        margin-bottom: 1rem;
+        margin-bottom: 0.6rem;
         background: no-repeat left center / contain;
     }
 }
@@ -227,27 +227,28 @@ article + article {
 }
 
 
-.skills {
-
+.skills {    
     .title {
         background-image: url(../assets/icons/skills.svg);
     }
     
     &__list {
         display: flex;
-        flex-wrap: wrap;
         column-gap: 1rem;
-        row-gap: 0.2rem;
         color: #232126;
+        width: 100%;
+    }
+
+    &__column {
+        flex-basis: 30%;
     }
     
     &__item {
         display: block;
-        flex-basis: 30%;
-        padding-left: 1.5rem;
-        text-align: start;
-        line-height: 1rem;
         background: no-repeat left center / 1rem;
+        padding-left: 1.5rem;
+        line-height: 1.2rem;
+        text-align: start;
     }
 }
 
@@ -273,6 +274,10 @@ article + article {
 
 .vue {
     background-image: url(../assets/icons/icon-vue.svg);
+}
+
+.vite {
+    background-image: url(../assets/icons/icon-vite.svg);
 }
 
 .react {
