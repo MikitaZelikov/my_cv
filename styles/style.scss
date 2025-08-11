@@ -1,6 +1,7 @@
 @import "./reset.scss";
 
 html {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -300,13 +301,20 @@ article + article {
     background-image: url(../assets/icons/hobbies.svg);
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 440px) {
     html {
-        font-size: 2.388vw;
+        font-size: 2.27vw;
     }
 
     body {
-        width: 100vw;
-        height: calc(1.4143 * 100vw);
+        width: 95vw;
+        height: calc(1.4143 * 95vw);
+    }
+}
+
+@media only screen and (max-height: 440px) and (orientation: landscape) {
+    html {
+        height: 90vw;
+        overflow: auto;
     }
 }
